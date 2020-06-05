@@ -8,6 +8,15 @@ def turn_count(board)
   return turns
 end
 
+#Using modulo %
+def current_player(board)
+  if turn_count(board) % 2 == 0
+    return "X"
+  else
+    return "O"
+  end
+end
+
 def current_player(board)
   if turn_count(board).even?
     return "X"
@@ -15,3 +24,5 @@ def current_player(board)
     return "O"
   end
 end
+
+#Using the ternary operator
